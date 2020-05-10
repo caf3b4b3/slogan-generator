@@ -1,0 +1,248 @@
+<html>
+<head>
+    <title>UKGov COVID-19 #ASG: Ambiguous Slogan Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/gen.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="/jquery.textfill.js"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-titillium-web@0.0.72/index.min.css">
+    <script>
+
+        function resizeFont() {
+            $("#l1-parent").textfill({
+                innerTag: 'div'
+            });
+            $("#l2-parent").textfill({
+                innerTag: 'div'
+            });
+            $("#l3-parent").textfill({
+                innerTag: 'div'
+            });
+        }
+
+
+        var fal_01 = [
+            "stay in park",
+            "inject bleach",
+            "eat chips",
+            "oh now go",
+            "eat more"
+        ];
+        var fal_02 = [
+            "don't inject bleach",
+            "go slowly insane",
+            "wash your smelly bum",
+            "sod the poor"
+        ];
+        var fal_03 = [
+            "stay in park",
+            "pickled onions",
+            "yeah right!",
+            "save yourself",
+            "(haha idiots)",
+            "just turn around"
+        ];
+
+        var bor_01 = [
+            "phwoar",
+            "ignore all evidence",
+            "ask farage",
+            "hide in fridge",
+            "sit in fridge",
+            "sell the NHS",
+            "strong and stable!"
+        ];
+        var bor_02 = [
+            "phwoarrrrrrr",
+            "is nicola watching?",
+            "can I take another holiday?",
+            "PPE? What PPE?",
+            "phwoarrr take it on the chin",
+            "over 90? shame that",
+            "generate fake news",
+            "generate more fake news",
+            "I demand a haircut"
+        ];
+        var bor_03 = [
+            "phhppphhwoarr",
+            "is this mask on backwards?",
+            "phooo phwoo phwoooaaar"
+        ];
+
+        var con_01 = [
+            "covid is a lie",
+            "5G",
+            "Strong and stable",
+            "MOAR BLEACH PLZ"
+        ];
+
+        var con_02 = [
+            "Donate to Richard Branson",
+            "Turn off the masts!",
+            "clap for boris",
+            "feed the poor to the poor",
+            "I got covid from MMR",
+            "burn the wind turbines"
+        ];
+
+        var con_03 = [
+            "We Demand Haircuts",
+            "STOP vaccines",
+            "Government conspiracy"
+        ];
+
+        var line1In, line2In, line3In;
+
+        $(document).ready(function () {
+            line1In = $("#line1In");
+            line2In = $("#line2In");
+            line3In = $("#line3In");
+
+            $('#line1In').bind('keypress', function (e) {
+                setTimeout(() => {
+                    keyDown(line1In)
+                }, 10);
+            });
+            $('#line2In').bind('keypress', function (e) {
+                setTimeout(() => {
+                    keyDown(line2In)
+                }, 10);
+            });
+            $('#line3In').bind('keypress', function (e) {
+                setTimeout(() => {
+                    keyDown(line3In)
+                }, 10);
+            });
+
+            $("#keepCalm").change(function () {
+                if (this.checked) {
+                    $("#slogan-bg").attr('src', './green-over.png');
+                } else {
+                    $("#slogan-bg").attr('src', './red-over.png');
+                }
+            });
+
+            $("#act_gen").click(function () {
+                generate();
+            });
+
+            $("#act_bor").click(function () {
+                borisise();
+            });
+
+            $("#act_fal").click(function () {
+                falafelise();
+            });
+
+            $("#act_con").click(function () {
+                conspiracy();
+            });
+        });
+
+        function borisise() {
+            $("#l1").html(bor_01[Math.floor(Math.random() * bor_01.length)]);
+            $("#l2").html(bor_02[Math.floor(Math.random() * bor_02.length)]);
+            $("#l3").html(bor_03[Math.floor(Math.random() * bor_03.length)]);
+            resizeFont();
+        }
+
+        function falafelise() {
+            $("#l1").html(fal_01[Math.floor(Math.random() * fal_01.length)]);
+            $("#l2").html(fal_02[Math.floor(Math.random() * fal_02.length)]);
+            $("#l3").html(fal_03[Math.floor(Math.random() * fal_03.length)]);
+            resizeFont();
+        }
+
+        function conspiracy() {
+            $("#l1").html(con_01[Math.floor(Math.random() * con_01.length)]);
+            $("#l2").html(con_02[Math.floor(Math.random() * con_02.length)]);
+            $("#l3").html(con_03[Math.floor(Math.random() * con_03.length)]);
+            resizeFont();
+        }
+
+        function generate() {
+            keyDown(line1In);
+            keyDown(line2In);
+            keyDown(line3In);
+            resizeFont();
+        }
+
+        function keyDown(line) {
+            $("#" + $(line).data('line')).html($(line).val());
+            resizeFont();
+        }
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-gen my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><small class="text-muted">(un)</small>Official UKGov COVID-19
+                        <br/> Ambiguous Slogan Generator</h5>
+                    <form class="form-gen">
+                        <div class="form-label-group">
+                            <input type="text" id="line1In" class="form-control" placeholder="Custom line 1" required
+                                   data-line="l1">
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" id="line2In" class="form-control" placeholder="Custom line 2" required
+                                   data-line="l2">
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" id="line3In" class="form-control" placeholder="Custom line 3" required
+                                   data-line="l3">
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="keepCalm"> <label
+                                class="custom-control-label" for="keepCalm">Keep Calm (and ignore the science)
+                            Mode</label>
+                        </div>
+                        <hr class="my-4">
+                        <button id="act_fal" class="btn btn-lg btn-warning btn-block text-uppercase" type="button">
+                            OFalafelise
+                        </button>
+                        <button id="act_bor" class="btn btn-lg btn-danger btn-block text-uppercase" type="button">
+                            Borisise
+                        </button>
+                        <button id="act_con" class="btn btn-lg btn-info btn-block text-uppercase mb-3" type="button">
+                            Conspiracy nut mode
+                        </button>
+                        <div class="s">
+                            <img id="slogan-bg" class="img-fluid" src="green-over.png" alt="slogan">
+                            <div class="slogan-text-parent">
+                            <div id="l1-parent">
+                                <div id="l1" class="slogan-text resize"></div>
+                            </div>
+                            <div id="l2-parent">
+                                <div id="l2" class="slogan-text resize"></div>
+                            </div>
+                            <div id="l3-parent">
+                                <div id="l3" class="slogan-text resize"></div>
+                            </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <button id="act_gen" class="btn btn-lg btn-primary btn-block text-uppercase" type="button">
+                            Regenerate
+                        </button>
+                    </form>
+                    <small class="text-muted">RM, inspired by <a
+                            href="https://twitter.com/OFalafel/status/1259446167831752710">@OFalafel</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
