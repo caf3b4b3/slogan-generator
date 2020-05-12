@@ -30,13 +30,14 @@ body {
     width: 100%;
 }
 
-.form-gen .btn {
+.btn {
     font-size: 80%;
     border-radius: 5rem;
     letter-spacing: .1rem;
     font-weight: bold;
     padding: 1rem;
     transition: all 0.2s;
+    text-transform: uppercase;
 }
 
 .form-label-group {
@@ -126,4 +127,8 @@ body {
     text-align: left;
     font-size: small;
     color: #00651a;
+}
+
+.svg-inline {
+    height: 1em
 }
