@@ -339,6 +339,17 @@ body {
     border-color: #046293;
 }
 
+.resp-sharing-button--reddit {
+    background-color: #5f99cf;
+    border-color: #5f99cf;
+}
+
+.resp-sharing-button--reddit:hover,
+.resp-sharing-button--reddit:active {
+    background-color: #3a80c1;
+    border-color: #3a80c1;
+}
+
 .resp-sharing-button--whatsapp {
     background-color: #25D366;
     border-color: #25D366;
@@ -349,3 +360,10 @@ body {
     background-color: #1DA851;
     border-color: #1DA851;
 }
+
+.resp-sharing-button--telegram {
+    background-color: #54A9EB;
+}
+
+.resp-sharing-button--telegram:hover {
+    background-color: #4B97D1;}
