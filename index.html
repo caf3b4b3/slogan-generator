@@ -73,29 +73,6 @@
             });
         }
 
-        var fal_01 = [
-            "stay in park",
-            "inject bleach",
-            "eat chips",
-            "oh now go",
-            "eat more"
-        ];
-        var fal_02 = [
-            "don't inject bleach",
-            "go slowly insane",
-            "wash your smelly bum",
-            "sod the poor",
-            "down with this sort of thing"
-        ];
-        var fal_03 = [
-            "stay in park",
-            "pickled onions",
-            "yeah right!",
-            "save yourself",
-            "(haha idiots)",
-            "just turn around"
-        ];
-
         var bor_01 = [
             "phwoar",
             "ignore all evidence",
@@ -199,10 +176,6 @@
                 borisise();
             });
 
-            $("#act_fal").click(function () {
-                falafelise();
-            });
-
             $("#act_con").click(function () {
                 conspiracy();
             });
@@ -214,13 +187,6 @@
             $("#l1").html(bor_01[Math.floor(Math.random() * bor_01.length)]);
             $("#l2").html(bor_02[Math.floor(Math.random() * bor_02.length)]);
             $("#l3").html(bor_03[Math.floor(Math.random() * bor_03.length)]);
-            resizeFont();
-        }
-
-        function falafelise() {
-            $("#l1").html(fal_01[Math.floor(Math.random() * fal_01.length)]);
-            $("#l2").html(fal_02[Math.floor(Math.random() * fal_02.length)]);
-            $("#l3").html(fal_03[Math.floor(Math.random() * fal_03.length)]);
             resizeFont();
         }
 
@@ -252,8 +218,6 @@
                 <div class="card-body">
                     <h1 class="card-title text-center mb-2"><small class="text-muted">(un)</small>Official UKGov COVID&#x2011;19
                         Slogan&nbsp;Generator </h1>
-                    <h2 class="text-center text-muted card-subtitle mb-3">(based on <a
-                            href="https://twitter.com/OFalafel/status/1259446167831752710">the original</a>)</h2>
                     <form class="form-gen">
                         <h3 class="card-subtitle mb-3 text-muted">The more ambiguous the better:</h3>
                         <div class="form-label-group">
@@ -274,9 +238,6 @@
                         </div>
                         <hr class="my-4">
                         <h2 class="card-subtitle mb-3 text-muted">Or generate slogan automagically:</h2>
-                        <button id="act_fal" class="btn btn-lg btn-warning btn-block" type="button">
-                            OFalafelise
-                        </button>
                         <button id="act_bor" class="btn btn-lg btn-danger btn-block" type="button">
                             Borisise
                         </button>
