@@ -3,6 +3,14 @@ body {
     background: linear-gradient(to right, #0062E6, #33AEFF);
 }
 
+.card-title {
+    font-size: 3.5vh;
+}
+
+.card-subtitle {
+    font-size: 1em;
+}
+
 .card-gen {
     border: 0;
     border-radius: 1rem;
