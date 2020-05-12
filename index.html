@@ -18,6 +18,12 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-titillium-web@0.0.72/index.min.css">
+
+    <!-- generated with https://favicon.io/emoji-favicons/thumbs-up/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script>
 
         function resizeFont() {
@@ -28,6 +34,9 @@
                 innerTag: 'div'
             });
             $("#l3-parent").textfill({
+                innerTag: 'div'
+            });
+            $("#l4-parent").textfill({
                 innerTag: 'div'
             });
         }
@@ -43,7 +52,8 @@
             "don't inject bleach",
             "go slowly insane",
             "wash your smelly bum",
-            "sod the poor"
+            "sod the poor",
+            "down with this sort of thing"
         ];
         var fal_03 = [
             "stay in park",
@@ -102,7 +112,8 @@
             "burn the wind turbines",
             "chinese virus",
             "Covert biological weapons",
-            "Illuminati Made Me Batty"
+            "Illuminati Made Me Batty",
+            "down with this sort of thing"
         ];
 
         var con_03 = [
@@ -144,6 +155,10 @@
                 }
             });
 
+            $("#hideFooter").click(function(){
+                $("#l4-parent").toggle();
+            });
+
             $("#act_gen").click(function () {
                 generate();
             });
@@ -159,6 +174,8 @@
             $("#act_con").click(function () {
                 conspiracy();
             });
+
+            resizeFont();
         });
 
         function borisise() {
@@ -219,8 +236,7 @@
                         </div>
                         <div class="custom-control custom-checkbox mb-3">
                             <input type="checkbox" class="custom-control-input" checked="checked" id="keepCalm"> <label
-                                class="custom-control-label" for="keepCalm">Keep Calm (and ignore the science)
-                            Mode</label>
+                                class="custom-control-label" for="keepCalm">Lackadaisical Mode</label>
                         </div>
                         <hr class="my-4">
                         <button id="act_fal" class="btn btn-lg btn-warning btn-block text-uppercase" type="button">
@@ -235,25 +251,32 @@
                         <div class="s">
                             <img id="slogan-bg" class="img-fluid" src="green-over.png" alt="slogan">
                             <div class="slogan-text-parent">
-                            <div id="l1-parent">
-                                <div id="l1" class="slogan-text resize"></div>
-                            </div>
-                            <div id="l2-parent">
-                                <div id="l2" class="slogan-text resize"></div>
-                            </div>
-                            <div id="l3-parent">
-                                <div id="l3" class="slogan-text resize"></div>
-                            </div>
+                                <div id="l1-parent">
+                                    <div id="l1" class="slogan-text resize"></div>
+                                </div>
+                                <div id="l2-parent">
+                                    <div id="l2" class="slogan-text resize"></div>
+                                </div>
+                                <div id="l3-parent">
+                                    <div id="l3" class="slogan-text resize"></div>
+                                </div>
+                                <div id="l4-parent">
+                                    <div id="l4" class="resize">slogangenerator.net/covid</div>
+                                </div>
                             </div>
                         </div>
-                        <hr class="my-4">
+                        <div class="custom-control custom-checkbox mt-3 mb-0">
+                            <input type="checkbox" class="custom-control-input" id="hideFooter"> <label
+                                class="custom-control-label" for="hideFooter">Hide footer</label>
+                        </div>
+                        <hr class="mb-4 mt-3">
                         <button id="act_gen" class="btn btn-lg btn-primary btn-block text-uppercase" type="button">
                             Regenerate
                         </button>
                     </form>
                     <small class="text-muted">RM, inspired by <a
-                            href="https://twitter.com/OFalafel/status/1259446167831752710">@OFalafel</a> |
-                        <a href="https://github.com/caf3b4b3/slogan-generator">pull reqs welcome</a></small>
+                            href="https://twitter.com/OFalafel/status/1259446167831752710">@OFalafel</a> | <a
+                            href="https://github.com/caf3b4b3/slogan-generator">pull reqs welcome</a></small>
                 </div>
             </div>
         </div>

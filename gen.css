@@ -94,10 +94,28 @@ body {
     height: 10%;
 }
 
+#l4-parent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5%;
+    background-color: rgba(255, 255, 255, 0.6);
+    line-height: 1;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
 #l1, #l2, #l3 {
     text-align: center;
     line-height: 1em;
     font-size: 10em;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+#l4 {
+    text-align: left;
+    font-size: small;
+    color: #00651a;
 }
